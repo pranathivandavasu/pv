@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#34400f">
+<title>Pranathi Vandavasu | ServiceNow Consultant</title>
+<meta name="description" content="Pranathi Vandavasu, ServiceNow Consultant in Hyderabad. ITSM, IRM/GRC, SecOps, GenAI, REST Integrations, SPM and SOC 2 Type II audit.">
+<style>
+  :root {
+    --olive: #34400f;
+    --olive-2: #4a5a17;
+    --lime: #cfe28a;
+    --lav: #d9ccf2;
+    --lav-2: #b9a6ea;
+    --cream: #f8f6ef;
+    --black: #0c0c0c;
+    --cobalt: #2323d6;
+    --peach: #f6c9a8;
+    --ink: #17180f;
+    --cond: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "Helvetica Neue Condensed", Impact, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 1.02rem/1.65 var(--sans); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 6px; }
+  p { margin: 0 0 1rem; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; position: relative; }
+
+  /* Headings: condensed caps + italic serif accent */
+  h1, h2, h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; line-height: .98; letter-spacing: -.005em; margin: 0; }
+  h1 em, h2 em, h3 em, .it { font-family: var(--serif); font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; }
+  h2 { font-size: clamp(2.4rem, 6.2vw, 4.4rem); margin-bottom: 2.25rem; }
+  h3 { font-size: 1.6rem; margin-bottom: .6rem; }
+  .kicker { font: 700 .8rem var(--sans); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 1rem; }
+  mark { background: var(--cobalt); color: var(--lav); padding: 0 .18em; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 30; background: var(--olive); color: var(--cream); }
+  header .wrap { max-width: 1240px; display: flex; align-items: center; justify-content: space-between; height: 4rem; }
+  .brand { font: 700 1.5rem var(--cond); text-transform: uppercase; text-decoration: none; letter-spacing: .01em; }
+  .brand em { font: italic 400 1.15rem var(--serif); text-transform: none; }
+  nav { display: flex; gap: 1.6rem; align-items: center; }
+  nav a { font: 700 .82rem var(--sans); letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
+  nav a:hover { color: var(--lime); }
+  nav a.cta { background: var(--lav); color: var(--black); padding: .5rem 1.1rem; border-radius: 6px; }
+  nav a.cta:hover { background: var(--lime); color: var(--black); }
+  @media (max-width: 960px) { nav a:not(.cta) { display: none; } }
+
+  /* Wavy section edges */
+  .sec { position: relative; background: var(--sec); color: var(--ink); padding: 6.5rem 0 5.5rem; }
+  .wave { position: absolute; left: 0; top: -29px; width: 100%; height: 30px; fill: var(--sec); display: block; }
+  .on-dark { color: var(--cream); }
+
+  .btn { display: inline-block; font: 700 .85rem var(--sans); letter-spacing: .1em; text-transform: uppercase; text-decoration: none; padding: .9rem 1.5rem; border-radius: 6px; }
+  .btn.lav { background: var(--lav); color: var(--black); } .btn.lav:hover { background: var(--lime); }
+  .btn.dark { background: var(--black); color: var(--lime); } .btn.dark:hover { background: var(--olive-2); color: var(--cream); }
+  .actions { display: flex; flex-wrap: wrap; gap: .9rem; }
+
+  /* Hero */
+  .hero { background: var(--olive); color: var(--cream); padding: 4rem 0 6.5rem; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; }
+  .hero h1 { font-size: clamp(3.2rem, 9.5vw, 7rem); margin-bottom: 1.2rem; }
+  .hero h1 em { color: var(--lime); font-size: .82em; }
+  .hero .lead { font: italic 400 clamp(1.15rem, 2.3vw, 1.55rem)/1.4 var(--serif); max-width: 34ch; margin-bottom: 1rem; }
+  .hero .sub { color: #d7ddc4; max-width: 50ch; margin-bottom: 2rem; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+  .visual { position: relative; min-height: 470px; }
+  .paper { position: absolute; background: #fff; padding: 12px 12px 12px; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+  .paper.back { width: 54%; aspect-ratio: 4 / 5; right: 0; top: 10%; transform: rotate(8deg); }
+  .paper.main { width: 62%; aspect-ratio: 4 / 5; left: 0; top: 0; transform: rotate(-5deg); z-index: 1; }
+  .ph { position: relative; width: 100%; height: 100%; background: var(--lime); display: grid; place-items: center; overflow: hidden; }
+  .ph span { font: 700 5.5rem var(--cond); color: var(--olive); }
+  .photo { position: absolute; inset: 0; background-position: center; background-size: cover; background-repeat: no-repeat; }
+  .p1 { background-image: url("photo-1.jpg"); }
+  .p2 { background-image: url("photo-2.jpg"); }
+  .p3 { background-image: url("photo-3.jpg"); }
+  .p4 { background-image: url("photo-4.jpg"); }
+  .sticker { z-index: 2; position: absolute; right: 2%; bottom: 0; width: 128px; height: 128px; border-radius: 50%; background: var(--lav); color: var(--black); display: grid; place-items: center; text-align: center; transform: rotate(10deg); font: 700 1.5rem/1 var(--cond); text-transform: uppercase; box-shadow: 0 8px 18px rgba(0,0,0,.3); }
+  .sticker small { display: block; font: 600 .62rem var(--sans); letter-spacing: .1em; margin-top: .3rem; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3.5rem; align-items: center; }
+  .frame { position: relative; width: min(340px, 78vw); aspect-ratio: 4 / 5; border: 12px solid var(--cobalt); border-radius: 36px; box-shadow: 14px 14px 0 var(--lav-2); overflow: hidden; background: var(--lav); transform: rotate(-2deg); }
+  .frame .ph { background: var(--lav); } .frame .ph span { color: var(--cobalt); }
+  .facts { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+  .facts span { background: var(--lav); border-radius: 999px; padding: .4rem 1rem; font-size: .92rem; font-weight: 600; }
+  @media (max-width: 820px) { .about { grid-template-columns: 1fr; } .frame { margin: 0 auto; } }
+
+  /* Ticker */
+  .ticker { background: var(--black); color: var(--cream); overflow: hidden; white-space: nowrap; padding: 1rem 0 2rem; }
+  .ticker div { display: inline-block; animation: slide 40s linear infinite; font: 700 1.4rem var(--cond); text-transform: uppercase; letter-spacing: .03em; }
+  .ticker span { padding: 0 1rem; } .ticker i { color: var(--lime); font-style: normal; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker div { animation: none; } html { scroll-behavior: auto; } }
+
+  /* Journey timeline */
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 2rem; border-left: 3px solid var(--black); max-width: 760px; }
+  .timeline li { position: relative; padding-bottom: 2.2rem; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before { content: ""; position: absolute; left: calc(-2rem - 9px); top: .35rem; width: 15px; height: 15px; border-radius: 50%; background: var(--cobalt); border: 3px solid var(--lav); }
+  .timeline li.has-photo { display: grid; grid-template-columns: 1fr 190px; gap: 2rem; align-items: start; }
+  .thumb { background: #fff; padding: 8px; width: 190px; aspect-ratio: 4 / 5; transform: rotate(3deg); box-shadow: 0 10px 22px rgba(0,0,0,.22); }
+  .thumb .ph { background: var(--lav-2); }
+  @media (max-width: 700px) { .timeline li.has-photo { grid-template-columns: 1fr; } .thumb { width: 150px; } }
+  .when { font: 700 2.2rem var(--cond); line-height: 1; }
+  .when em { font: italic 400 1.35rem var(--serif); margin-left: .5rem; color: var(--cobalt); }
+  .timeline p { margin: .4rem 0 0; max-width: 56ch; }
+
+  /* Skills */
+  .skills { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+  .skill { border-radius: 22px; padding: 1.6rem; }
+  .skill h3 { font-size: 1.5rem; } .skill p { margin: 0; }
+  .s1 { background: var(--lav); } .s2 { background: var(--lime); } .s3 { background: var(--peach); } .s4 { background: #bcd0ff; }
+
+  /* Experience */
+  .card { background: var(--cream); color: var(--ink); border-radius: 26px; padding: 2rem; margin-bottom: 1.4rem; }
+  .card .org { font-weight: 700; margin-bottom: .15rem; }
+  .card .meta { color: #55583f; font-size: .92rem; margin-bottom: 1.4rem; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  @media (max-width: 880px) { .cols { grid-template-columns: 1fr; } }
+  .pane { border-radius: 20px; padding: 1.4rem; }
+  .pane.a { background: var(--lav); } .pane.b { background: var(--lime); }
+  .pane h4 { margin: 0 0 .8rem; font: 700 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; }
+  .card ul { margin: 0; padding-left: 1.2rem; } .card li { margin-bottom: .6rem; }
+  .card.last { margin-bottom: 0; background: var(--lime); }
+
+  /* Speaking */
+  .talk { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.4rem; }
+  @media (max-width: 820px) { .talk { grid-template-columns: 1fr; } }
+  .tile { border: 2px solid var(--lime); border-radius: 26px; padding: 2rem; }
+  .tile h3 { color: var(--lime); } .tile.alt { background: var(--lav); color: var(--black); border-color: var(--lav); } .tile.alt h3 { color: var(--black); }
+
+  /* Certifications */
+  .chips { display: flex; flex-wrap: wrap; gap: .8rem; list-style: none; padding: 0; margin: 0; }
+  .chips li { padding: .75rem 1.2rem; border-radius: 14px; font-weight: 600; }
+  .chips li:nth-child(4n+1) { background: var(--lav); } .chips li:nth-child(4n+2) { background: var(--lime); }
+  .chips li:nth-child(4n+3) { background: var(--peach); } .chips li:nth-child(4n) { background: #bcd0ff; }
+
+  /* Education */
+  .edu { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .edu .card { margin: 0; }
+
+  /* Contact + footer */
+  .contact { text-align: center; }
+  .contact h2 { font-size: clamp(2.6rem, 7.5vw, 5.4rem); margin-bottom: 1rem; }
+  .contact p { max-width: 46ch; margin: 0 auto 2rem; color: #d9d9cf; }
+  .contact .actions { justify-content: center; }
+  footer { background: var(--black); color: var(--cream); padding: 1rem 1.5rem 2.5rem; text-align: center; }
+  footer .big { font: 700 clamp(2.6rem, 9vw, 6.5rem)/1 var(--cond); text-transform: uppercase; margin: 0 0 1.5rem; }
+  footer .big em { font-size: .8em; color: var(--lime); }
+  footer .box { background: var(--olive); border-radius: 36px; padding: 1.8rem 1.5rem; max-width: 720px; margin: 0 auto 1.8rem; }
+  footer .box nav { justify-content: center; flex-wrap: wrap; gap: 1.4rem; }
+  footer .box nav a:not(.cta) { display: inline; }
+  footer small { color: #a9ad98; }
+  @media print { header, .ticker { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Pranathi <em>vandavasu</em></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#certifications">Credentials</a>
+      <a class="cta" href="mailto:pranathiv.work@gmail.com">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">ServiceNow Consultant · Hyderabad, India</p>
+        <h1>Pranathi <em>vandavasu</em></h1>
+        <p class="lead">ServiceNow Consultant with 6+ years of experience across ITSM, IRM/GRC, SecOps and Now Assist/AI agents.</p>
+        <p class="sub">Worked on 30+ projects across health, retail, insurance, government and other industries.</p>
+        <div class="actions">
+          <a class="btn lav" href="#about">Meet the Consultant</a>
+          <a class="btn lav" href="#experience">View Experience</a>
+          <a class="btn lav" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="paper back" role="img" aria-label="Pranathi Vandavasu in a red top"><div class="ph" style="background:var(--lav-2)"><div class="photo p4"></div></div></div>
+        <div class="paper main" role="img" aria-label="Pranathi Vandavasu speaking on stage at Knowledge 2025">
+          <div class="ph"><span aria-hidden="true">PV</span><div class="photo p1"></div></div>
+        </div>
+        <div class="sticker"><div>30+<small>PROJECTS</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="sec" id="about" style="--sec: var(--cream)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap about">
+      <div class="frame" role="img" aria-label="Pranathi Vandavasu smiling at a cafe table">
+        <div class="ph"><span aria-hidden="true">PV</span><div class="photo p2"></div></div>
+      </div>
+      <div>
+        <p class="kicker">About</p>
+        <h2>Professional <em>summary</em></h2>
+        <p>ServiceNow Consultant with 6+ years of experience delivering ITSM, IRM/GRC, SecOps, Strategic Portfolio Management, Major Incident Management, Now Assist/AI agents, Moveworks and Integrations. Worked on 30+ projects across health, retail, insurance, government and other industries.</p>
+        <p>Skilled in ServiceNow configuration, scripting, workflow automation, REST integrations, testing, and solution design. Experienced in conducting client workshops, translating business requirements into scalable solutions, troubleshooting issues, and supporting implementations from discovery through production.</p>
+        <div class="facts">
+          <span>Hyderabad, India</span>
+          <span>Consultant – C2, Cprime</span>
+          <span>EPGPM, IIM Kozhikode (Pursuing '27)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div>
+      <span>ITSM</span><i>✦</i><span>IRM/GRC</span><i>✦</i><span>SecOps</span><i>✦</i><span>GenAI</span><i>✦</i><span>REST Integrations</span><i>✦</i><span>SPM</span><i>✦</i><span>Project Management</span><i>✦</i><span>SOC 2 Type II Audit</span><i>✦</i>
+      <span>ITSM</span><i>✦</i><span>IRM/GRC</span><i>✦</i><span>SecOps</span><i>✦</i><span>GenAI</span><i>✦</i><span>REST Integrations</span><i>✦</i><span>SPM</span><i>✦</i><span>Project Management</span><i>✦</i><span>SOC 2 Type II Audit</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ===== JOURNEY ===== -->
+  <section class="sec" id="journey" style="--sec: var(--lav)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker">Journey</p>
+      <h2>My <em>journey</em> so far</h2>
+      <ol class="timeline">
+        <li><div class="when">2020 <em>Bachelor of Technology</em></div><p>CVR College of Engineering.</p></li>
+        <li><div class="when">July 2020 <em>Joined Cprime</em></div><p>Associate Consultant – C1: configured and enhanced ServiceNow ITSM and Service Catalog solutions.</p></li>
+        <li><div class="when">Consultant – C2 <em>Cprime</em></div><p>Designing and implementing ServiceNow solutions across ITSM, IRM/GRC, SecOps, Major Incident Management, Strategic Portfolio Management, Service Catalog and Case Management.</p></li>
+        <li class="has-photo"><div><div class="when">2025 <em>Knowledge 2025</em></div><p>Conference Speaker. Session: Integrating Security Incident Response with Unified Compliance Framework (UCF).</p></div><div class="thumb" role="img" aria-label="Pranathi Vandavasu at the Knowledge 2025 conference"><div class="ph"><div class="photo p3"></div></div></div></li>
+        <li><div class="when">Batch '27 <em>IIM Kozhikode</em></div><p>Pursuing the Executive Post Graduate Programme in Management.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="sec" id="skills" style="--sec: var(--cream)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker">Technical Skills</p>
+      <h2>ServiceNow <em>modules</em></h2>
+      <div class="skills">
+        <div class="skill s1"><h3>ITSM</h3><p>Incident, Problem, Change, Request and Knowledge Management</p></div>
+        <div class="skill s2"><h3>ITSM Pro</h3><p>Now Assist/AI agent, Digital Portfolio Management (DPM), Continual Improvement Management (CIM), DevOps Change Velocity (DCV), Universal Request</p></div>
+        <div class="skill s3"><h3>Major Incident Management</h3></div>
+        <div class="skill s4"><h3>IRM/GRC</h3><p>Policy and Compliance, Risk Management, Audit Management, Business Continuity Management</p></div>
+        <div class="skill s1"><h3>SecOps</h3><p>Security Incident Response and Vulnerability Response</p></div>
+        <div class="skill s2"><h3>Third-Party/Vendor Risk Management</h3></div>
+        <div class="skill s3"><h3>Strategic Portfolio Management</h3><p>Demand and Project Management</p></div>
+        <div class="skill s4"><h3>Service Catalog, Case Management, Workspaces</h3></div>
+        <div class="skill s1"><h3>Platform Analytics</h3><p>Dashboards and Reporting</p></div>
+        <div class="skill s2"><h3>Predictive Intelligence</h3><p>Now Assist/AI Agents (ITSM Pro, IRM)</p></div>
+        <div class="skill s3"><h3>Moveworks and Integrations</h3><p>Basic to mid level</p></div>
+        <div class="skill s4"><h3>HAM and SAM</h3><p>Basics</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="sec on-dark" id="experience" style="--sec: var(--olive)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker">Experience</p>
+      <h2>Professional <em>experience</em></h2>
+
+      <article class="card">
+        <h3>Consultant – C2</h3>
+        <p class="org">Cprime</p>
+        <p class="meta">Hyderabad, India · July 2020 – Present</p>
+        <div class="cols">
+          <div class="pane a">
+            <h4>Technical Role</h4>
+            <ul>
+              <li>Designed and implemented ServiceNow solutions across ITSM, IRM/GRC, SecOps, Major Incident Management, Strategic Portfolio Management, Service Catalog and Case Management.</li>
+              <li>Configured Incident, Problem, Change, Request, Knowledge and Major Incident Management processes based on client requirements.</li>
+              <li>Implemented Policy and Compliance Management, Risk Management, Audit Management and Business Continuity Management processes to improve governance, risk visibility and compliance tracking.</li>
+              <li>Configured Security Incident Response and Vulnerability Response capabilities to support security operations and remediation workflows.</li>
+              <li>TPRM/IRM Solution: Explained how third-party risks connect with enterprise risks, controls, issues and remediation.</li>
+              <li>Automated idea, demand and project creation processes within Strategic Portfolio Management.</li>
+              <li>Developed ServiceNow solutions using Business Rules, Script Includes, Client Scripts, UI Policies, Flow Designer and scheduled jobs.</li>
+              <li>Designed integrations using REST APIs, Scripted REST APIs, REST Messages, OAuth 2.0 and JSON payloads.</li>
+              <li>Integrated ServiceNow with Jira, Confluence and digital engineering applications for access provisioning and fulfilment, UCF Integration for controls, LDAP integration.</li>
+              <li>Enhanced scheduled integrations to create, update and deactivate ServiceNow records based on source-system data. Configured failure handling using response validation, error logging and operational monitoring.</li>
+              <li>Designed Service Catalog forms, record producers, variable sets, dynamic field behaviour, approval workflows and task automation.</li>
+              <li>Used fix scripts and background scripts to troubleshoot data issues and backfill historical records.</li>
+              <li>Evaluated and configured Predictive Intelligence, Now Assist and AI-agent use cases, mostly OOTB and a few custom.</li>
+              <li>Built dashboards and reports covering service-desk performance, incident trends, SLA compliance, risks and compliance status.</li>
+            </ul>
+          </div>
+          <div class="pane b">
+            <h4>Functional Role</h4>
+            <ul>
+              <li>Led client workshops, requirement-gathering sessions, solution walkthroughs, demonstrations and knowledge-transfer sessions.</li>
+              <li>Prepared functional requirements, technical designs, integration documentation, payload mappings, test cases and deployment documentation.</li>
+              <li>Performed unit, system, regression and user-acceptance testing and supported defect resolution.</li>
+              <li>Collaborated with architects, developers, business stakeholders and integration teams throughout the implementation lifecycle.</li>
+              <li>Provided post-production support, root-cause analysis and continuous improvements following go-live.</li>
+              <li>Mentored team members and reviewed ServiceNow configurations and technical solutions.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Associate Consultant – C1</h3>
+        <p class="org">Cprime</p>
+        <ul>
+          <li>Configured and enhanced ServiceNow ITSM and Service Catalog solutions.</li>
+          <li>Converted business requirements into functional and technical configurations.</li>
+          <li>Developed workflows, scripts, reports and dashboards.</li>
+          <li>Supported testing, deployment, defect resolution and production activities.</li>
+          <li>Collaborated with client business and technical teams to deliver platform enhancements.</li>
+        </ul>
+      </article>
+
+      <article class="card last">
+        <h3>Lead Internal Compliance Manager</h3>
+        <p class="org">Annual SOC 2 Type II Certification</p>
+        <ul>
+          <li>Directed the internal end-to-end audit lifecycle, coordinating across engineering, operations and leadership to validate policies, risks, incidents and annual control meetings.</li>
+          <li>Facilitated external auditor engagements, providing fully validated control evidence and checklists that resulted in seamless SOC 2 Type II renewal/certification.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SPEAKING ===== -->
+  <section class="sec on-dark" id="speaking" style="--sec: var(--black)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker" style="color:var(--lime)">Speaking Engagements</p>
+      <h2>On stage <em>and onsite</em></h2>
+      <div class="talk">
+        <div class="tile">
+          <h3>Conference Speaker | Knowledge 2025</h3>
+          <p><strong>Session:</strong> Integrating Security Incident Response with Unified Compliance Framework (UCF).</p>
+          <p>Delivered an expert-level technical presentation on seamlessly integrating Security Incident Response workflows with the Unified Compliance Framework (UCF) to streamline governance and automated response.</p>
+        </div>
+        <div class="tile alt">
+          <h3>Client Engagement and Enablement</h3>
+          <p>Led onsite workshops, requirement gathering sessions, and customer tool enablement and solution architecture with business objectives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="sec" id="certifications" style="--sec: var(--cream)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker">Certifications</p>
+      <h2>Credentials <em>&amp; accreditations</em></h2>
+      <ul class="chips">
+        <li>ServiceNow Certified System Administrator</li>
+        <li>Certified Implementation Specialist – Risk and Compliance</li>
+        <li>Certified Implementation Specialist – ITSM</li>
+        <li>Certified Implementation Specialist – SAM</li>
+        <li>Scrum Master ITIL certification</li>
+        <li>ServiceNow micro-certifications</li>
+        <li>ServiceNow GenAI/Now Assist accreditations</li>
+        <li>Moveworks Partner Delivery Engineer Enablement</li>
+        <li>Moveworks Partner Solutions Engineer Enablement</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="sec" id="education" style="--sec: var(--lav)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker">Education</p>
+      <h2>Academic <em>background</em></h2>
+      <div class="edu">
+        <div class="card"><h3>Executive Post Graduate Programme in Management</h3><p>Indian Institute of Management Kozhikode<br>Pursuing, Batch '27</p></div>
+        <div class="card"><h3>Bachelor of Technology</h3><p>CVR College of Engineering<br>2020</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="sec contact on-dark" id="contact" style="--sec: var(--black)">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C180 0 360 60 540 30 S900 0 1080 30 S1260 60 1440 30 V60 H0Z"/></svg>
+    <div class="wrap">
+      <p class="kicker" style="color:var(--lime)">So...</p>
+      <h2>Let's <mark>CONNECT</mark> <em>about ServiceNow</em></h2>
+      <p>Reach out about ServiceNow projects across ITSM, IRM/GRC, SecOps, integrations and AI.</p>
+      <div class="actions">
+        <a class="btn lav" href="mailto:pranathiv.work@gmail.com">Let's Make It Happen</a>
+        <a class="btn lav" href="resume.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="big">Pranathi <em>vandavasu</em></p>
+  <div class="box">
+    <nav aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#certifications">Credentials</a>
+      <a href="mailto:pranathiv.work@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <small>© 2026 Pranathi Vandavasu · ServiceNow Consultant · Hyderabad, India</small>
+</footer>
+</body>
+</html>
